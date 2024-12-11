@@ -11,7 +11,7 @@ router = APIRouter()
 @router.post("/get_form")
 async def get_form(form: dict = Body()) -> Union[dict, str]:
     """
-    Конечная точка, возвращающая имя формы или, при отсутствии совпадений
+    Конечная точка, возвращающая имя формы или, при отсутствии совпадений,
     список полей с произведенной типизацией
     """
     validate_form = await validate_fields(form)
