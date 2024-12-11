@@ -1,6 +1,4 @@
-import urllib.parse
 from typing import Union
-import urllib
 
 from fastapi import APIRouter, Request, Body
 
