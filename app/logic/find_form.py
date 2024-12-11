@@ -3,6 +3,11 @@ from typing import Union
 from app.db.db import db
 
 async def get_form_name_or_none(form_obj: dict) -> Union[str, None]:
+    """
+    Принимает словарь с типизированными полями формы.
+    В случае совпадения с шаблоном в БД, возвращает имя шаблона.
+    В ином случае возвращает None.
+    """
     all_forms = db.all()
     checking_form = set((k, v) for k, v in form_obj.items())
     for form in all_forms:
